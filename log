@@ -66,3 +66,48 @@ Thu Apr 21 11:59:25 HSP 2022:
  tests:  13|5
 total_score: 15/70
 ff909db
+Thu Apr 21 12:02:07 HSP 2022: 
+ treemap.c | 33 +++++++++++++++------------------
+ 1 file changed, 15 insertions(+), 18 deletions(-)
+In file included from test.c:4:0:
+treemap.c: In function 'insertTreeMap':
+treemap.c:64:16: error: unused variable 'nodo' [-Werror=unused-variable]
+      TreeNode* nodo = createTreeNode(key, value);
+                ^~~~
+treemap.c: In function 'searchTreeMap':
+treemap.c:97:11: error: expected '(' before 'aux'
+     while aux != NULL){
+           ^~~
+treemap.c:97:11: error: statement with no effect [-Werror=unused-value]
+treemap.c:97:5: error: this 'while' clause does not guard... [-Werror=misleading-indentation]
+     while aux != NULL){
+     ^~~~~
+treemap.c:97:22: note: ...this statement, but the latter is misleadingly indented as if it is guarded by the 'while'
+     while aux != NULL){
+                      ^
+treemap.c:97:22: error: expected statement before ')' token
+treemap.c:98:29: error: expected ')' before 'aux'
+         if(tree->lower_than aux->pair->key,key)==1) aux = aux->right;
+                             ^~~
+treemap.c:98:48: error: expected expression before '==' token
+         if(tree->lower_than aux->pair->key,key)==1) aux = aux->right;
+                                                ^~
+treemap.c:98:9: error: this 'if' clause does not guard... [-Werror=misleading-indentation]
+         if(tree->lower_than aux->pair->key,key)==1) aux = aux->right;
+         ^~
+treemap.c:98:51: note: ...this statement, but the latter is misleadingly indented as if it is guarded by the 'if'
+         if(tree->lower_than aux->pair->key,key)==1) aux = aux->right;
+                                                   ^
+treemap.c:98:51: error: expected statement before ')' token
+treemap.c:99:9: error: 'else' without a previous 'if'
+         else if(tree->lower_than(key aux->pair->key)==1) aux = aux->left;
+         ^~~~
+treemap.c:99:38: error: expected ')' before 'aux'
+         else if(tree->lower_than(key aux->pair->key)==1) aux = aux->left;
+                                      ^~~
+treemap.c:99:17: error: too few arguments to function 'tree->lower_than'
+         else if(tree->lower_than(key aux->pair->key)==1) aux = aux->left;
+                 ^~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+d590399
