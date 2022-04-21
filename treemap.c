@@ -94,6 +94,20 @@ void removeNode(TreeMap * tree, TreeNode* node) {
         return;
     }
 
+    if(node->left == NULL){ //1 hijo
+        if(tree->lower_than(node->pair->key,node->parent->pair->key)==1) node->parent->left = node->right;
+        else if(tree->lower_than(node->parent->pair->key,node->pair->key)==1) node->parent->right = node->left;
+        free(node);
+        return;
+    }
+
+    if(node->right == NULL){ //1 hijo
+        if(tree->lower_than(node->pair->key,node->parent->pair->key)==1) node->parent->left = node->left;
+        else if(tree->lower_than(node->parent->pair->key,node->pair->key)==1) node->parent->right = node->right;
+        free(node);
+        return;
+    }
+
 
 }
 
