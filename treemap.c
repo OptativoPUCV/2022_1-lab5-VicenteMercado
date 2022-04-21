@@ -97,9 +97,6 @@ void removeNode(TreeMap * tree, TreeNode* node) {
     if(node->left == NULL){ //1 hijo
         if(node==node->parent->left) node->parent->left=(node->right);
         if(node==node->parent->right) node->parent->right=(node->right);
-        /*if(tree->lower_than(node->pair->key,node->parent->pair->key)==1) node->parent->left = node->right;
-        else if(tree->lower_than(node->parent->pair->key,node->pair->key)==1) node->parent->right = node->right;
-        return; */
 
         node->right->parent = node->parent;
         free(node);
@@ -110,9 +107,6 @@ void removeNode(TreeMap * tree, TreeNode* node) {
     if(node->right == NULL){
         if(node==node->parent->left) node->parent->left=(node->left);
         if(node==node->parent->right) node->parent->right=(node->left);
-        /*if(tree->lower_than(node->pair->key,node->parent->pair->key)==1) node->parent->left = node->right;
-        else if(tree->lower_than(node->parent->pair->key,node->pair->key)==1) node->parent->right = node->right;
-        return; */
 
         node->left->parent = node->parent;
 
@@ -120,13 +114,12 @@ void removeNode(TreeMap * tree, TreeNode* node) {
         return;
 
     } 
-    
-    /*if(node->right == NULL){ 
-        if(tree->lower_than(node->pair->key,node->parent->pair->key)==1) node->parent->left = node->left;
-        else if(tree->lower_than(node->parent->pair->key,node->pair->key)==1) node->parent->right = node->right;
+
+    if(node->left != NULL && node->right != NULL){ //2 hijos
+
         free(node);
         return;
-    } */
+    }
 
 
 }
