@@ -111,3 +111,44 @@ treemap.c:99:17: error: too few arguments to function 'tree->lower_than'
 cc1.exe: all warnings being treated as errors
 Compilation failed
 d590399
+Thu Apr 21 12:05:41 HSP 2022: 
+ treemap.c | 11 ++++++++---
+ 1 file changed, 8 insertions(+), 3 deletions(-)
+In file included from test.c:4:0:
+treemap.c: In function 'searchTreeMap':
+treemap.c:102:11: error: expected '(' before 'aux'
+     while aux != NULL){
+           ^~~
+treemap.c:102:11: error: statement with no effect [-Werror=unused-value]
+treemap.c:102:5: error: this 'while' clause does not guard... [-Werror=misleading-indentation]
+     while aux != NULL){
+     ^~~~~
+treemap.c:102:22: note: ...this statement, but the latter is misleadingly indented as if it is guarded by the 'while'
+     while aux != NULL){
+                      ^
+treemap.c:102:22: error: expected statement before ')' token
+treemap.c:103:29: error: expected ')' before 'aux'
+         if(tree->lower_than aux->pair->key,key)==1) aux = aux->right;
+                             ^~~
+treemap.c:103:48: error: expected expression before '==' token
+         if(tree->lower_than aux->pair->key,key)==1) aux = aux->right;
+                                                ^~
+treemap.c:103:9: error: this 'if' clause does not guard... [-Werror=misleading-indentation]
+         if(tree->lower_than aux->pair->key,key)==1) aux = aux->right;
+         ^~
+treemap.c:103:51: note: ...this statement, but the latter is misleadingly indented as if it is guarded by the 'if'
+         if(tree->lower_than aux->pair->key,key)==1) aux = aux->right;
+                                                   ^
+treemap.c:103:51: error: expected statement before ')' token
+treemap.c:104:9: error: 'else' without a previous 'if'
+         else if(tree->lower_than(key aux->pair->key)==1) aux = aux->left;
+         ^~~~
+treemap.c:104:38: error: expected ')' before 'aux'
+         else if(tree->lower_than(key aux->pair->key)==1) aux = aux->left;
+                                      ^~~
+treemap.c:104:17: error: too few arguments to function 'tree->lower_than'
+         else if(tree->lower_than(key aux->pair->key)==1) aux = aux->left;
+                 ^~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+179704c
