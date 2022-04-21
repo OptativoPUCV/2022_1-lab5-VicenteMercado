@@ -38,8 +38,11 @@ TreeNode * createTreeNode(void* key, void * value) {
 
 TreeMap * createTreeMap(int (*lower_than) (void* key1, void* key2)) {
 
-    //new->lower_than = lower_than;
-    return NULL;
+    TreeMap* nuevo = (TreeMap*)malloc(sizeof(TreeMap));
+
+    nuevo->lower_than = lower_than;
+
+    return nuevo;
 }
 
 
@@ -70,6 +73,12 @@ void eraseTreeMap(TreeMap * tree, void* key){
 
 
 Pair * searchTreeMap(TreeMap * tree, void* key) {
+    TreeNode* nodo = tree->root;
+    while(nodo != NULL){
+        if(nodo->pair->key == key) return nodo;
+        if(nodo->pair->key > key) nodo = nodo->right;
+        if(nodo->pair->key > key) nodo = nodo->left;
+    }
     return NULL;
 }
 
