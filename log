@@ -158,3 +158,14 @@ Thu Apr 21 12:15:33 HSP 2022:
  tests:  15|4
 total_score: 25/70
 15b7d1b
+Thu Apr 21 12:17:57 HSP 2022: 
+ treemap.c | 5 +++++
+ 1 file changed, 5 insertions(+)
+In file included from test.c:4:0:
+treemap.c: In function 'removeNode':
+treemap.c:90:25: error: statement with no effect [-Werror=unused-value]
+         node->pair->key == NULL;
+                         ^
+cc1.exe: all warnings being treated as errors
+Compilation failed
+fe933fd
