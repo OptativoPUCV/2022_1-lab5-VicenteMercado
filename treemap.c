@@ -189,10 +189,11 @@ Pair * nextTreeMap(TreeMap * tree) {
     if(nodo->right != NULL){
         nodo = minimum(nodo->right);
         return nodo->pair;
-    } else {
+    } 
+    else {
         while(nodo->parent != NULL){
             if(nodo->pair->key > nodo->parent->pair->key) nodo = nodo->parent;
-            else return nodo->pair;
+            else if(nodo->pair->key < nodo->parent->pair->key) return nodo->pair;
         }
     }
 
