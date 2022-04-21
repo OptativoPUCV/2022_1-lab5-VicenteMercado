@@ -187,7 +187,8 @@ Pair * firstTreeMap(TreeMap * tree) {
 Pair * nextTreeMap(TreeMap * tree) {
     TreeNode* nodo = tree->current;
     if(nodo->right != NULL){
-        return minimum(nodo)->pair;
+        nodo = minimum(nodo);
+        return nodo->pair;
     } else {
         while(nodo->parent != NULL){
             if(nodo->pair->key > nodo->parent->pair->key) nodo = nodo->parent;
