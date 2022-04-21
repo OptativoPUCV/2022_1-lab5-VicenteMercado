@@ -80,7 +80,7 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
             return nodo->pair;
         }
         if(nodo->pair->key > key) nodo = nodo->right;
-        if(nodo->pair->key > key) nodo = nodo->left;
+        if(nodo->pair->key < key) nodo = nodo->left;
     }
     return NULL;
 }
