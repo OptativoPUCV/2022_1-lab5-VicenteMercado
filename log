@@ -152,3 +152,9 @@ treemap.c:104:17: error: too few arguments to function 'tree->lower_than'
 cc1.exe: all warnings being treated as errors
 Compilation failed
 179704c
+Thu Apr 21 12:15:33 HSP 2022: 
+ treemap.c | 18 +++++++++++-------
+ 1 file changed, 11 insertions(+), 7 deletions(-)
+ tests:  15|4
+total_score: 25/70
+15b7d1b
