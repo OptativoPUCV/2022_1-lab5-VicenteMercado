@@ -191,9 +191,10 @@ Pair * nextTreeMap(TreeMap * tree) {
         return nodo->pair;
     } 
     else {
-        while(nodo->parent != NULL){
-            if(tree->lower_than(nodo->parent->pair->key,tree->current->pair->key)==1) return nodo->parent->pair;
-            else if(tree->lower_than(tree->current->pair->key,nodo->parent->pair->key)==1) nodo = nodo->parent;
+        TreeNode* next = nodo;
+        while(next->parent != NULL){
+            if(tree->lower_than(next->parent->pair->key,nodo->pair->key)==1) return next->parent->pair;
+            else if(tree->lower_than(nodo->pair->key,next->parent->pair->key)==1) next = next->parent;
         }
     }
 
