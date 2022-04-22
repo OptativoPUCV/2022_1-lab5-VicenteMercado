@@ -199,7 +199,7 @@ Pair * nextTreeMap(TreeMap * tree) {
              tree->current = padre;
              return padre->pair;
             } 
-            padre = padre->parent;
+            else padre = padre->parent;
         }
     }
 
