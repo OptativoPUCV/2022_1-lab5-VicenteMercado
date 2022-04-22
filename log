@@ -508,3 +508,14 @@ Fri Apr 22 11:48:31 HSP 2022:
  tests:  25|1
 total_score: 60/70
 eb6c33d
+Fri Apr 22 12:05:43 HSP 2022: 
+ treemap.c | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+In file included from test.c:4:0:
+treemap.c: In function 'upperBound':
+treemap.c:177:15: error: unused variable 'UB_upper' [-Werror=unused-variable]
+     TreeNode* UB_upper = UB_node;
+               ^~~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+86432f1
