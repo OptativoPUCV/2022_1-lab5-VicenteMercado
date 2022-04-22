@@ -519,3 +519,9 @@ treemap.c:177:15: error: unused variable 'UB_upper' [-Werror=unused-variable]
 cc1.exe: all warnings being treated as errors
 Compilation failed
 86432f1
+Fri Apr 22 12:05:56 HSP 2022: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  26|1
+total_score: 60/70
+7445844
