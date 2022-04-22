@@ -194,10 +194,10 @@ Pair * nextTreeMap(TreeMap * tree) {
     if(nodo->right == NULL){
         while(nodo->parent != NULL){
             if(tree->lower_than(nodo->parent->pair->key,tree->current->pair->key)==1) nodo = nodo->parent;
-            else if(tree->lower_than(tree->current->pair->key,nodo->parent->pair->key)==1){
+            else{
                 tree->current = nodo->parent;
                 return tree->current->pair;
-            }
+            } 
         }
     }
 
