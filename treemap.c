@@ -178,8 +178,7 @@ Pair * upperBound(TreeMap * tree, void* key) {
 
     while (nodo != NULL){
         if(tree->lower_than(nodo->pair->key,key)==1){
-            if(tree->lower_than(UB_node->pair->key,nodo->pair->key)==1 ||
-            is_equal(tree,UB_node->pair->key,nodo->pair->key)==1){
+            if(tree->lower_than(UB_node->pair->key,nodo->pair->key)==1){
                 if(tree->lower_than(key,UB_node->pair->key)==1){
                   UB_node = nodo;
                 }
@@ -188,8 +187,7 @@ Pair * upperBound(TreeMap * tree, void* key) {
         }
 
         else if(tree->lower_than(key,nodo->pair->key)==1){
-            if(tree->lower_than(UB_node->pair->key,nodo->pair->key)==1 ||
-            is_equal(tree,UB_node->pair->key,nodo->pair->key)==1){
+            if(tree->lower_than(UB_node->pair->key,nodo->pair->key)==1){
                 if(tree->lower_than(key,UB_node->pair->key)==1){
                   UB_node = nodo;
                 }
