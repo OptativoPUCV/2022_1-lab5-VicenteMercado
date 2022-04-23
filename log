@@ -576,3 +576,9 @@ treemap.c:178:15: error: unused variable 'prevUB' [-Werror=unused-variable]
 cc1.exe: all warnings being treated as errors
 Compilation failed
 dd10636
+Sat Apr 23 00:27:53 HSP 2022: 
+ treemap.c | 1 -
+ 1 file changed, 1 deletion(-)
+ tests:  27|1
+total_score: 60/70
+d1f624c
