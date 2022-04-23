@@ -182,6 +182,7 @@ Pair * upperBound(TreeMap * tree, void* key) {
             if(is_equal(tree,UB_node,tree->root)==1){
                 UB_node = nodo;
             }
+            printf("HOLA");
             if(tree->lower_than(UB_node->pair->key,nodo->pair->key)==1){
                 UB_node = nodo;
             }
