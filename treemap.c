@@ -197,6 +197,8 @@ Pair * upperBound(TreeMap * tree, void* key) {
         else{
             return nodo->pair;
         }
+
+        printf("%d", * (int *) UB_node->pair->key);
     }
 
     return UB_node->pair;
