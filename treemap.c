@@ -175,22 +175,19 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
 Pair * upperBound(TreeMap * tree, void* key) {
     TreeNode* nodo = tree->root;
     TreeNode* UB_node= nodo;
-    int cont=0;
 
     while (nodo != NULL){
         if(tree->lower_than(nodo->pair->key,key)==1){
-            if(tree->lower_than(UB_node->pair->key,nodo->pair->key)==1 && cont != 0){
+            if(tree->lower_than(nodo->pair->key,UB_node->pair->key)==1){
                 UB_node = nodo;
             }
-            cont++;
             nodo = nodo->right;
         }
 
         else if(tree->lower_than(key,nodo->pair->key)==1){
-            if(tree->lower_than(UB_node->pair->key,nodo->pair->key)==1 && cont != 0){
+            if(tree->lower_than(nodo->pair->key,UB_node->pair->key)==1){
                 UB_node = nodo;
             }
-            cont++;
             nodo = nodo->left;
 
         } 
