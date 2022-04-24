@@ -198,11 +198,13 @@ Pair * upperBound(TreeMap * tree, void* key) {
         else{
             return nodo->pair;
         }
+       
 
-        //printf("Key: %d \n Nodo: %d \n UB:%d\n\n", * (int *) key, * (int *) nodo->pair->key, * (int *) UB_node->pair->key);
+        printf("Key: %d \n Nodo: %d \n UB:%d\n\n", * (int *) key, * (int *) nodo->pair->key, * (int *) UB_node->pair->key);
     }
     
     if(UB_node != tree->root) return UB_node->pair;
+
 }
 
 Pair * firstTreeMap(TreeMap * tree) {
