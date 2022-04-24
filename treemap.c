@@ -179,7 +179,6 @@ Pair * upperBound(TreeMap * tree, void* key) {
     while (nodo != NULL){
         if(tree->lower_than(nodo->pair->key,key)==1){
             if(tree->lower_than(UB_node->pair->key,nodo->pair->key)==1){
-                //printf("DERECHA, %d menor que %d\n", *(int*)UB_node->pair->key,*(int*)nodo->pair->key);
                 UB_node = nodo;
             }
 
@@ -187,10 +186,6 @@ Pair * upperBound(TreeMap * tree, void* key) {
         }
 
         else if(tree->lower_than(key,nodo->pair->key)==1){
-            /*if(tree->lower_than(UB_node->pair->key,nodo->pair->key)==1){
-                printf("IZQUIERDA, %d menor que %d\n", *(int*)UB_node->pair->key,*(int*)nodo->pair->key);
-                UB_node = nodo;
-            }*/
             UB_node = nodo;
             nodo = nodo->left;
         } 
@@ -203,6 +198,7 @@ Pair * upperBound(TreeMap * tree, void* key) {
         printf("UB:%d\n", * (int *) UB_node->pair->key);
     }
     
+    if(tree->lower_than(UB_node->pair->key, key) == 1) return NULL;
     return UB_node->pair;
 
 }
