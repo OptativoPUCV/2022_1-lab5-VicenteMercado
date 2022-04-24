@@ -193,11 +193,9 @@ Pair * upperBound(TreeMap * tree, void* key) {
         else{
             return nodo->pair;
         }
-       
-
-        printf("UB:%d\n", * (int *) UB_node->pair->key);
-    }
     
+    }
+
     if(tree->lower_than(UB_node->pair->key, key) == 1) return NULL;
     return UB_node->pair;
 
