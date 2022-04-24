@@ -179,7 +179,7 @@ Pair * upperBound(TreeMap * tree, void* key) {
     while (nodo != NULL){
         if(tree->lower_than(nodo->pair->key,key)==1){
             if(tree->lower_than(UB_node->pair->key,nodo->pair->key)==1){
-                printf("DERECHA, %d menor que %d\n", *(int*)UB_node->pair->key,*(int*)nodo->pair->key);
+                //printf("DERECHA, %d menor que %d\n", *(int*)UB_node->pair->key,*(int*)nodo->pair->key);
                 UB_node = nodo;
             }
             nodo = nodo->right;
