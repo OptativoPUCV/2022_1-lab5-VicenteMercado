@@ -192,7 +192,7 @@ Pair * upperBound(TreeMap * tree, void* key) {
                 UB_node = nodo;
             }*/
             UB_node = nodo;
-            nodo->left;
+            nodo = nodo->left;
         } 
         
         else{
